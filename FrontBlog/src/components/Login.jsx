@@ -63,9 +63,10 @@ export const Login = ({ switchAuthHandler }) => {
 
     const isSubmitButtonDisabled = isLoading || !formState.password.isValid || !formState.email.isValid;
 
-    return(
-        <>
+    return (
+        <article className="container-login">
             <form onSubmit={handleLogin}>
+                <h1>Login</h1>
                 <Input
                     field="email"
                     label="Email"
@@ -89,11 +90,11 @@ export const Login = ({ switchAuthHandler }) => {
                 <button type="submit" disabled={isSubmitButtonDisabled}>
                     {isLoading ? "Loading..." : "Login"}
                 </button>
+                <div>
+                    <span onClick={switchAuthHandler}>Don't have an account? Register here</span>
+                </div>
             </form>
-            <div>
-                <span>Don't have an account?</span>
-                <button onClick={switchAuthHandler}>Register</button>
-            </div>
-        </>
+
+        </article>
     );
 };

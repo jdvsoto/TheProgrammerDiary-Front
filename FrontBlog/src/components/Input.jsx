@@ -19,9 +19,9 @@ export const Input = ({
 
     return(
         <>
-            <section>
-                <div>
-                    <span>{label}</span>
+            <section className="input-container">
+                <div className="lbl-container">
+                    <label>{label}</label>
                 </div>
                 <input
                     type={type}
