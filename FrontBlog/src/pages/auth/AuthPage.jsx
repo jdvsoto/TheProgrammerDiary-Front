@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Login } from "../../components/Login";
+import { Link } from "react-router-dom";
 import './authPage.css';
 
 export const AuthPage = () => {
@@ -10,6 +11,8 @@ export const AuthPage = () => {
     };
 
     return (
-        <Login switchAuthHandler={handleAuthPageToggle} />
+        <div>
+            <Login switchAuthHandler={handleAuthPageToggle} />
+        </div>
     );
 };

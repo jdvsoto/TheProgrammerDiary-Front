@@ -1,5 +1,6 @@
 .container-login {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -88,4 +89,21 @@
 
 .lbl-container {
     margin-bottom: 3%;
+}
+
+.container-login .link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #eff9f9;
+    background-color: rgb(189, 16, 16);
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0px 0px 0px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.container-login .link:hover {
+    background-color: rgb(198, 40, 40);
 }

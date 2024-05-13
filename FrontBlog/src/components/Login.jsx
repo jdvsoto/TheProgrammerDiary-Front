@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Input } from "./Input";
+import { Link } from "react-router-dom";
 import {
     validateEmail,
     validatePassword,
@@ -65,6 +66,7 @@ export const Login = ({ switchAuthHandler }) => {
 
     return (
         <article className="container-login">
+            <Link to="/" className="link">X</Link>
             <form onSubmit={handleLogin}>
                 <h1>Login</h1>
                 <Input
