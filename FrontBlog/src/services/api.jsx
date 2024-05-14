@@ -9,7 +9,18 @@ export const login = async (data) => {
     try {
         return await apiClient.post('/auth/login', data);
     } catch (e) {
-        return{
+        return {
+            error: true,
+            e
+        }
+    }
+};
+
+export const getPublications = async () => {
+    try {
+        return await apiClient.get('/publications/getPublications');
+    } catch (e) {
+        return {
             error: true,
             e
         }
