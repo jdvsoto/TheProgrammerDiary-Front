@@ -1,0 +1,120 @@
+article {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.navContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.divAddPublication {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #35748c;
+    position: fixed;
+    width: 97.5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 15%;
+    width: 50%;
+    height: 65%;
+    background-color: #f0f7f7;
+    border: 1px solid #64626237;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.5s ease-in;
+}
+
+.container h1 {
+    font-size: 2rem;
+    color: #00A9D2;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.container label {
+    font-size: 1rem;
+    color: #00A9D2;
+    margin: 10px 0;
+}
+
+.container input {
+    width: 70%;
+    height: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid rgba(119, 173, 196, 0.3);
+    border-radius: 0;
+    background-color: #f0f7f7;
+    outline: none;
+    position: relative;
+    color: #35748c;
+    background-image: linear-gradient(to right, rgba(28, 109, 141, 0.3) 0%, rgba(53, 116, 140, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: bottom left;
+    transition: background-size 0.3s ease;
+}
+
+.container input:focus {
+    background-size: 100% 3px;
+    border-bottom: 0px;
+}
+
+.design {
+    background: linear-gradient(to right bottom, #00ff99 0%, #0066ff 100%);
+    width: 50%;
+}
+
+.container button {
+    background: linear-gradient(to right, #00ff99 20%, #0066ff 100%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 15px;
+    border-color: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: none;
+    transition: all 0.6s ease-out;
+}
+
+.container button:hover {
+    transform: translateY(-5px);
+}
+
+.addPublicationContainer {
+    position: relative;
+}
+
+.iconBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

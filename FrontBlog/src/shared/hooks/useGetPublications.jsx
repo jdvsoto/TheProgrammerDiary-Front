@@ -23,9 +23,8 @@ const useGetPublications = () => {
 
     fetchPublications();
 
-    // Cleanup function
     return () => {
-      // Cleanup code if needed
+
     };
   }, []);
 
@@ -33,4 +32,3 @@ const useGetPublications = () => {
 };
 
 export default useGetPublications;
-

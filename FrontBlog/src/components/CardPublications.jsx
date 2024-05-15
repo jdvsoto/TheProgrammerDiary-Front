@@ -1,13 +1,13 @@
 export const CardPublications = ({
     title,
-    content,
+    subTitle,
     img,
 }) => {
     return (
-        <div className="card">
-            <img src={img} alt={title} />
-            <h2>{title}</h2>
-            <p>{content}</p>
-        </div>
+            <div className="card-content">
+                <img src={img} alt={title} />
+                <h2>{title}</h2>
+                <p>{subTitle}</p>
+            </div>
     );
 };

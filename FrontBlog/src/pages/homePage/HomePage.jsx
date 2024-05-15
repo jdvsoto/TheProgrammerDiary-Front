@@ -1,6 +1,5 @@
-import Navbar from "../../components/Navbar";
+import { Navbar } from "../../components/Navbar";
 import { Publication } from "../../components/Publication";
-
 import "./homePage.css";
 
 export const HomePage = () => {
@@ -8,6 +7,7 @@ export const HomePage = () => {
         <div>
             <Navbar />
             <Publication />
+
         </div>
     );
 };

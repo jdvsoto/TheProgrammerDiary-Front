@@ -26,3 +26,25 @@ export const getPublications = async () => {
         }
     }
 };
+
+export const addPublication = async (data) => {
+    try {
+        return await apiClient.post('/publications/newPublication', data);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+};
+
+export const getPublication = async (id) => {
+    try {
+        return await apiClient.get(`/publications/getPublication/${id}`);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+};

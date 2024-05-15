@@ -29,9 +29,9 @@ export const Input = ({
                     onChange={handleValueChange}
                     onBlur={handleInputBlur}
                 />
-                <span>
+                {/* <span>
                     {showErrorMessage && validationMessage}
-                </span>
+                </span> */}
             </section>
         </>
 
