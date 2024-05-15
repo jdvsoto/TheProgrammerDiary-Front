@@ -9,7 +9,7 @@ export const Publication = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <div>
+        <div className='cards-container'>
             {publications.map(publication => (
                 <CardPublications
                     key={publication._id}

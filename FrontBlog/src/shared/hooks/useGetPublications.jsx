@@ -13,10 +13,7 @@ const useGetPublications = () => {
           throw new Error('Failed to fetch publications');
         }
         const data = await response.json();
-        setPublications(data.publications.map(publication => ({
-          ...publication,
-          img: `../uploads/${publication.img}`
-        })));
+        setPublications(data.publications);
         setLoading(false);
       } catch (error) {
         setError(error.message);
