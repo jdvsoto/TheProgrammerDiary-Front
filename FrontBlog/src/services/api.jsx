@@ -59,3 +59,14 @@ export const deletePublication = async (id) => {
         }
     }
 };
+
+export const getCommentsByPublication = async (id) => {
+    try {
+        return await apiClient.get(`/comments/getCommentsByPublication?publication=${id}`);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+};

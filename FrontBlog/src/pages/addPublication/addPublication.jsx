@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AddPublication } from "../../components/AddPublication";
 import { Navbar } from '../../components/Navbar';
-import backIcon from '../../assets/img/backIcon.png'
 import './addPublication.css';
 
 export const AddPublicationPage = () => {
