@@ -1,9 +1,10 @@
 import { useGetCommentsByPublication } from '../shared/hooks';
 import { useEffect } from 'react';
+import '../styles/Comments.css';
 
 export const Comment = ({ id }) => {
     const { comments, loading, error, fetchCommentsByPublication } = useGetCommentsByPublication(id);
-    console.log("this is the id " + id);
+
     useEffect(() => {
         fetchCommentsByPublication();
     }, [id]);
@@ -12,18 +13,26 @@ export const Comment = ({ id }) => {
     if (error) return <p>{error}</p>;
 
     return (
-        <div>
-            <h1>Comments</h1>
-            {comments.map((comment) => (
-                <div key={comment._id}>
-                    <h3> Author:</h3>
-                    <p>{comment.author}</p>
-                    <h3>Email:</h3>
-                    <p>{comment.email}</p>
-                    <h3>Comment:</h3>
-                    <p>{comment.content}</p>
-                </div>
-            ))}
-        </div>
+        <section className='mainContainer'>
+            <h2>Comments</h2>
+            <div className="comment-section">
+
+                {comments.length === 0 ? (
+                    <p>No comments yet. Be the first to comment!</p>
+                ) : (
+                    comments.map((comment) => (
+                        <div key={comment._id} className="comment">
+                            <h3 className="comment-author">Author: {comment.author}</h3>
+                            <h3 className="comment-content">Comment:</h3>
+                            <p className='comment-txt'>{comment.content}</p>
+                        </div>
+                    ))
+                )}
+            </div>
+            <button className='btnAddComment'>
+                Add Comment
+            </button>
+        </section>
+
     );
 };

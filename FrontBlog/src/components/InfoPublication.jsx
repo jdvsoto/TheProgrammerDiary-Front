@@ -22,9 +22,10 @@ export const InfoPublication = ({ id }) => {
     return (
         <div className="container">
             <h1 className="title">{publications.title}</h1>
-            <h2 className="subtitle">{publications.subTitle}</h2>
+
             <img className="image" src={publications.img} alt={publications.title} />
-            <div>
+            <h2 className="subtitle">{publications.subTitle}</h2>
+            <div>   
                 <p className="author">Autor: {publications.author}</p>
                 <p className="date">Fecha de publicación: {formatDate(publications.createdAt)}</p>
             </div>
