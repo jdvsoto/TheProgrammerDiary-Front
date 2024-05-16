@@ -24,7 +24,7 @@ h2 {
 }
 
 .comment {
-    width: calc(30% - 10%);
+    width: 320px;
     height: 270px;
     margin: 50px;
     display: flex;

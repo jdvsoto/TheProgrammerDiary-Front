@@ -18,6 +18,7 @@ export const InfoPublicationPage = () => {
         };
         fetchComments();
     }, [params.id]);
+
     return (
         <div>
             <Navbar />
@@ -26,7 +27,7 @@ export const InfoPublicationPage = () => {
             <div style={{
                 marginTop: '50px',
             }}>
-                <AddComment publication={params.id} comments={comments} setComments={setComments}/>
+                <AddComment publication={params.id}/>
             </div>
 
         </div>
