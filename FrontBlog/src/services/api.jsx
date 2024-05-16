@@ -48,3 +48,14 @@ export const getPublication = async (id) => {
         }
     }
 };
+
+export const deletePublication = async (id) => {
+    try {
+        return await apiClient.delete(`/publications/deletePublication/${id}`);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+};

@@ -1,7 +1,7 @@
 export const CardPublications = ({
     title,
     subTitle,
-    img,
+    img
 }) => {
     return (
             <div className="card-content">
