@@ -81,3 +81,14 @@ export const addComment = async (data) => {
         }
     }
 };
+
+export const deleteComment = async (id) => {
+    try {
+        return await apiClient.delete(`/comments/deleteComment/${id}`);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+};

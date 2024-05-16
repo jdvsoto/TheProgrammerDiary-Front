@@ -4,3 +4,4 @@ export { useGetPublicationById } from './useGetPublicationById';
 export { useDeletePublication } from './useDeletePublication';  
 export { useGetCommentsByPublication } from './useGetCommets';
 export { useAddComment } from './useAddComment';
+export { useDeleteComment } from './useDeleteComment';

@@ -60,6 +60,7 @@ h2 {
 .comment-txt {
     margin: 0;
     font-size: 14px;
+    width: 100%;
 }
 
 .btnAddComment {
@@ -86,4 +87,44 @@ h2 {
 
 .btnAddComment:hover {
     transform: translateY(-5px);
+}
+
+.delete-button-comment {
+    background: #ff0000;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    width: 10%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 4px;
+    border-color: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: all 0.10s ease-out;
+    text-decoration: none;
+    color: #eff9f9;
+}
+
+.delete-button-comment:hover {
+    background-color: #900808;
+}
+
+.btn-delete-container{
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.comment-txt-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    white-space: pre-wrap;  
 }
