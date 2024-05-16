@@ -140,12 +140,12 @@ h2{
 }
 
 .delete-button{
-    background: linear-gradient(to right, #ff0000 20%, #ff6600 100%);
+    background: #ff0000;
     background-size: 200% 100%;
     background-position: right bottom;
     width: 10%;
     height: 9%;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 5px;
     border-color: none;
     cursor: pointer;
@@ -160,4 +160,8 @@ h2{
     position: absolute;
     top: 0;
     right: 10px;
+}
+
+.delete-button:hover {
+    background: #900808;
 }
