@@ -7,14 +7,18 @@ export const Navbar = () => {
     return (
         <nav>
             <ul>
-                <li>
-                    <img src={homeIcon}/>
-                    <Link to="/">Home Page</Link>
-                </li>
-                <li>
-                    <img src={postsIcon}/>
-                    <Link to="/publications">Publications</Link>
-                </li>
+                <Link to="/" className='linkNavbar'>
+                    <li>
+                        <img src={homeIcon} />
+                        Home Page
+                    </li>
+                </Link>
+                <Link to="/publications" className='linkNavbar'>
+                    <li>
+                        <img src={postsIcon} />
+                        Publications
+                    </li>
+                </Link>
             </ul>
         </nav>
     );

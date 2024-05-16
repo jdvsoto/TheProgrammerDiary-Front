@@ -92,7 +92,7 @@ export const AddPublication = () => {
         <>
             <div className="design" />
             <div className="container">
-                <form onSubmit={handleSubmit} className="formAddPublications">
+                <form onSubmit={handleSubmit}>
                     <h1>Add Publication</h1>
                     <Input
                         field={'title'}
@@ -103,6 +103,7 @@ export const AddPublication = () => {
                         onBlurHandler={handleInputValidationOnBlur}
                     // showErrorMessage={formState.title.showError}
                     // validationMessage={validatePublicationsMessage}
+                        className="inputStyle"
                     />
                     <Input
                         field={'subTitle'}

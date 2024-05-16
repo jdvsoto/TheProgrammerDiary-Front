@@ -23,15 +23,29 @@ export const Input = ({
                 <div className="lbl-container">
                     <label>{label}</label>
                 </div>
-                <input
+                {label === 'Content' ? (
+                    <textarea
+                        value={value}
+                        onChange={handleValueChange}
+                        onBlur={handleInputBlur}
+                        className="textAreaStyle"
+                    />
+                ) : (
+                    <input
+                        type={type}
+                        value={value}
+                        onChange={handleValueChange}
+                        onBlur={handleInputBlur}
+                    />
+                )
+
+                }
+                {/* <input
                     type={type}
                     value={value}
                     onChange={handleValueChange}
                     onBlur={handleInputBlur}
-                />
-                {/* <span>
-                    {showErrorMessage && validationMessage}
-                </span> */}
+                /> */}
             </section>
         </>
 

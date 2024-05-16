@@ -26,7 +26,6 @@ article {
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 100%;
 }
 
 .container form {
@@ -35,9 +34,9 @@ article {
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-top: 15%;
+    margin-top: 13%;
     width: 50%;
-    height: 65%;
+    height: 75%;
     background-color: #f0f7f7;
     border: 1px solid #64626237;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -56,13 +55,13 @@ article {
 .container label {
     font-size: 1rem;
     color: #00A9D2;
-    margin: 10px 0;
+    margin: 14px 0;
 }
 
 .container input {
-    width: 70%;
-    height: 5px;
-    padding: 5px 10px;
+    width: 80%;
+    height: 50%;
+    margin: 10px 0;
     border: none;
     border-bottom: 1px solid rgba(119, 173, 196, 0.3);
     border-radius: 0;
@@ -100,7 +99,7 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
     border: none;
     transition: all 0.6s ease-out;
 }
@@ -117,4 +116,50 @@ article {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container input{
+    height: 60%;
+    margin-top: 0;
+}
+
+.lbl-container{
+    display: flex;
+    justify-content: start;
+    align-items: start; 
+    width: 75%;
+}
+
+.linkNavbar{
+    text-decoration: none;
+    color: #eff9f9;
+}
+
+.textAreaStyle{
+    position: fixed;
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(119, 173, 196, 0.3);
+    border-radius: 0;
+    background-color: #f0f7f7;
+    outline: none;
+    position: relative;
+    color: #35748c;
+    background-image: linear-gradient(to right, rgba(28, 109, 141, 0.3) 0%, rgba(53, 116, 140, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: bottom left;
+    transition: background-size 0.3s ease;
+    resize: vertical;
+    max-height: 100px;
 }
