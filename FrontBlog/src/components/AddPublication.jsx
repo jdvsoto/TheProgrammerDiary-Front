@@ -43,37 +43,6 @@ export const AddPublication = () => {
         }));
     };
 
-    const handleInputValidationOnBlur = (value, field) => {
-        let isValid = false;
-        switch (field) {
-            case 'title':
-                isValid = validatePublications(value);
-                break;
-            case 'subTitle':
-                isValid = validatePublications(value);
-                break;
-            case 'content':
-                isValid = validatePublications(value);
-                break;
-            case 'author':
-                isValid = validatePublications(value);
-                break;
-            case 'img':
-                isValid = validatePublications(value);
-                break;
-            default:
-                break;
-        }
-        setFormState((prevState) => ({
-            ...prevState,
-            [field]: {
-                ...prevState[field],
-                isValid,
-                showError: !isValid,
-            },
-        }));
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         addPublication(
@@ -84,9 +53,6 @@ export const AddPublication = () => {
             formState.img.value
         );
     };
-
-    // const isSubmitButtonDisabled = loading || !formState.title.isValid || !formState.subTitle.isValid || !formState.content.isValid || !formState.author.isValid || !formState.img.isValid;
-
 
     return (
         <>
@@ -100,9 +66,6 @@ export const AddPublication = () => {
                         value={formState.title.value}
                         onChangeHandler={handleInputValueChange}
                         type="text"
-                        onBlurHandler={handleInputValidationOnBlur}
-                    // showErrorMessage={formState.title.showError}
-                    // validationMessage={validatePublicationsMessage}
                         className="inputStyle"
                     />
                     <Input
@@ -111,9 +74,6 @@ export const AddPublication = () => {
                         value={formState.subTitle.value}
                         onChangeHandler={handleInputValueChange}
                         type="text"
-                        onBlurHandler={handleInputValidationOnBlur}
-                    // showErrorMessage={formState.subTitle.showError}
-                    // validationMessage={validatePublicationsMessage}
                     />
                     <Input
                         field={'content'}
@@ -121,9 +81,6 @@ export const AddPublication = () => {
                         value={formState.content.value}
                         onChangeHandler={handleInputValueChange}
                         type="text"
-                        onBlurHandler={handleInputValidationOnBlur}
-                    // showErrorMessage={formState.content.showError}
-                    // validationMessage={validatePublicationsMessage}
                     />
                     <Input
                         field={'author'}
@@ -131,9 +88,6 @@ export const AddPublication = () => {
                         value={formState.author.value}
                         onChangeHandler={handleInputValueChange}
                         type="text"
-                        onBlurHandler={handleInputValidationOnBlur}
-                    // showErrorMessage={formState.author.showError}
-                    // validationMessage={validatePublicationsMessage}
                     />
                     <Input
                         field={'img'}
@@ -141,9 +95,6 @@ export const AddPublication = () => {
                         value={formState.img.value}
                         onChangeHandler={handleInputValueChange}
                         type="text"
-                        onBlurHandler={handleInputValidationOnBlur}
-                    // showErrorMessage={formState.img.showError}
-                    // validationMessage={validatePublicationsMessage}
                     />
                     <button type="submit">
                         {loading ? 'Loading...' : 'Add Publication'}

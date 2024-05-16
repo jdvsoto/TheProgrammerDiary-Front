@@ -70,3 +70,14 @@ export const getCommentsByPublication = async (id) => {
         }
     }
 };
+
+export const addComment = async (data) => {
+    try {
+        return await apiClient.post('/comments/newComment', data);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+};

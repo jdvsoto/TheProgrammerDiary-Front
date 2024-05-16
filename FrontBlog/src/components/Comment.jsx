@@ -29,9 +29,6 @@ export const Comment = ({ id }) => {
                     ))
                 )}
             </div>
-            <button className='btnAddComment'>
-                Add Comment
-            </button>
         </section>
 
     );

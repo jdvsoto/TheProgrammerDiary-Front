@@ -3,21 +3,13 @@ export const Input = ({
     label,
     value,
     onChangeHandler,
-    type,
-    showErrorMessage,
-    validationMessage,
-    onBlurHandler,
-
+    type
 }) => {
     const handleValueChange = (event) => {
         onChangeHandler(event.target.value, field);
     }
 
-    const handleInputBlur = (event) => {
-        onBlurHandler(event.target.value, field)
-    }
-
-    return(
+    return (
         <>
             <section className="input-container">
                 <div className="lbl-container">
@@ -27,7 +19,6 @@ export const Input = ({
                     <textarea
                         value={value}
                         onChange={handleValueChange}
-                        onBlur={handleInputBlur}
                         className="textAreaStyle"
                     />
                 ) : (
@@ -35,17 +26,8 @@ export const Input = ({
                         type={type}
                         value={value}
                         onChange={handleValueChange}
-                        onBlur={handleInputBlur}
                     />
-                )
-
-                }
-                {/* <input
-                    type={type}
-                    value={value}
-                    onChange={handleValueChange}
-                    onBlur={handleInputBlur}
-                /> */}
+                )}
             </section>
         </>
 
